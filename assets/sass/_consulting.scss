@@ -1,0 +1,46 @@
+.consulting-block {
+    background: $hamburger-bg;
+    padding: 40px 0;
+    @include mediaQuery(tabletLarge-view) {
+        padding: 80px 0;
+    }
+    @include mediaQuery(laptop-view) {
+        padding: 110px 0;
+    }
+    @include mediaQuery(desktop-view) {
+        padding: 150px 0;
+    }
+    @include mediaQuery(tabletLarge-view) {
+        padding: 173px 0 176px;
+    }
+    .container {
+        max-width: 906px;
+    }
+    h1,h2 {
+        color: $white;
+        text-align: center;
+        font-family: 'lexendMega-regular', sans-serif;
+        margin-bottom: 20px;
+        text-shadow: 1px 5px 9.9px $shadow-pink;
+        opacity: 70%;
+        @include mediaQuery(tablet-view) {
+            margin-bottom: 30px;
+        }
+        @include mediaQuery(tabletLarge-view) {
+            margin-bottom: 40px;
+        }
+    }
+    p {
+        color:$white;
+        text-align: center;
+        font-family: 'lexendMega-light', sans-serif;
+        @include mediaQuery(tablet-view) {
+            @include fontsize(18px);
+            margin-bottom: 30px;
+        }
+        @include mediaQuery(tabletLarge-view) {
+            @include fontsize(20px);
+            margin-bottom: 55px;
+        }
+    }
+}

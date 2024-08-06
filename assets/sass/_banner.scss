@@ -1,0 +1,215 @@
+.banner {
+    position: relative;
+    .container {
+        max-width: 100%;
+        padding: 0;
+    }
+    .banner-image {
+        height: 200px;
+        @include mediaQuery(tablet-view) {
+            height: 400px;
+        }
+        @include mediaQuery(tabletLarge-view) {
+            height: 500px;
+        }
+        @include mediaQuery(laptop-view) {
+            height: 600px;
+        }
+        @include mediaQuery(desktop-view) {
+            height: 700px;
+        }
+        @include mediaQuery(desktopXl-view) {
+            height: 990px;
+        }
+        img {
+            display: block;
+            width: 100%;
+            object-fit: cover;
+            height: 100%;
+        }
+        video {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+    .banner-block-image {
+        @include mediaQuery(desktopXll-view) {
+            height: 710px;
+        }
+    }
+    .social-icons {
+        position: fixed;
+        top: 50%;
+        right: 0;
+        z-index: 999;
+        display: none;
+        @include mediaQuery(tablet-view) {
+            display: block;
+        }
+        ul {
+            li {
+                margin-bottom: 15px;
+                padding-left: 0;
+                width: 0%;
+                transition: all 0.5s;
+                a {
+                    transform: translateX(56%);
+                    width: 270px;
+                    display: flex;
+                    transition: all 0.5s ease;
+                    align-items: center;
+                    &::before {
+                        content: ' ';
+                        background: $hamburger-bg;
+                        opacity: 0;
+                        border-top-left-radius: 29px;
+                        border-bottom-left-radius: 29px;
+                        width: 270px;
+                        height: 50px;
+                        position: absolute;
+                        transition: all 0.5s ease;
+                    }
+                    span{
+                        @include fontsize(12px);
+                        opacity: 0;
+                        margin-left: 7px;
+                        font-family: 'lexendMega-light', sans-serif;
+                        position: relative;
+                        top: -3px;
+                        transition: all 0.5s ease;
+                        color: $social-cl;
+                        margin-top: 7px;
+                    }
+                }
+                i{
+                    border: 1px solid $white;
+                    font-size: 19px;
+                    color: $white;
+                    text-align: center;
+                    line-height: 37px;
+                    border-radius: 50%;
+                    position: relative;
+                    transform: rotate(0deg);
+                    transition: all 0.5s ease;
+                    margin-left: 5px;
+                    &::before {
+                        position: relative;
+                        z-index: 99;
+                        line-height: 54px;
+                        transform: rotate(0deg);
+                        transition: all 0.5s ease;
+                    }
+                    &::after {
+                        content: ' ';
+                        width: 38px;
+                        height: 38px;
+                        position: absolute;
+                        border-radius: 50%;
+                        left: 0;
+                        right: 0;
+                        margin: 0 auto;
+                        top: 0px;
+                    }
+                }
+                &:hover {
+                    a {
+                        transform: translateX(0%);
+                        &::before {
+                            opacity: 80%; 
+                            
+                        }
+                    }
+                    span {
+                        opacity: 1;
+                    }
+                    i{
+                        border-color: transparent;
+                        transform: rotate(360deg);
+                        &:before {
+                            transform: rotate(360deg);
+                        }
+                    }
+                }
+                &::after {
+                    display: none;
+                }
+            }
+        }
+    }
+    .contact-icon {
+        background: url('../images/contact-banner-icon.png') no-repeat center;
+        display: inline-block;
+        width: 40px;
+        height: 40px;
+        background-size: 40px;
+    }
+    .mail-icon {
+        background: url('../images/mail-banner-icon.png') no-repeat center;
+        display: inline-block;
+        width: 40px;
+        height: 40px;
+        background-size: 40px;
+    }
+    .linke-icon {
+        background: url('../images/linkedin-banner-icon.png') no-repeat center;
+        display: inline-block;
+        width: 40px;
+        height: 40px;
+        background-size: 40px;
+    }
+    .slick-prev.slick-arrow , .slick-next.slick-arrow {
+        display: none !important;
+    }
+    .slick-dots{
+        position: absolute;
+        bottom: 15px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        left: 0;
+        right: 0;
+        margin: auto;
+        gap: 10px;
+        @include mediaQuery(tablet-view) {
+            bottom: 25px;
+        }
+        @include mediaQuery(tabletLarge-view) {
+            bottom: 35px;
+        }
+        @include mediaQuery(laptop-view) {
+            bottom: 40px;
+        }
+        @include mediaQuery(desktopXl-view) {
+            bottom: 60px;
+        }
+        li{
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            border: 2px solid $white;
+            padding: 0;
+            margin-bottom: 0;
+            cursor: pointer;
+            &::after {
+                display: none;
+            }
+            button{
+                font-size: 0;
+            }
+            &.slick-active {
+                border-color:$banner-bg-cl;
+            }
+        }
+        
+    }
+ 
+}
+
+
+
+
+
+
+

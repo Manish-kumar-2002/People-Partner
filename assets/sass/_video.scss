@@ -1,0 +1,59 @@
+.video-section-wrap {
+    position: relative;
+    .container {
+        max-width: 100%;
+        padding: 0;
+    }
+    .video-content {
+        video {
+            width: 100%;
+            display: block;
+        }
+    }
+    .slick-prev.slick-arrow , .slick-next.slick-arrow {
+        display: none !important;
+    }
+    .slick-dots {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        position: absolute;
+        bottom: 10px;
+        left: 0;
+        right: 0;
+        margin: auto;
+        justify-content: center;
+        li {
+            width: 10px;
+            height: 10px;
+            border: 1px solid $white;
+            border-radius: 50%;
+            &.slick-active {
+                border: 1px solid $hamburger-line;
+            }
+            button {
+                font-size: 0;
+            }
+        }
+    }
+    .contact-icon , .mail-icon , .linked-icon {
+        background: url("../images/phone-icon.png") no-repeat center;
+        display: inline-block;
+        width: 70px;
+        height: 70px;
+        background-size: 30%;
+    }
+    .mail-icon {
+        background: url("../images/mail-icon.png") no-repeat center;
+    }
+    .linked-icon {
+        background: url("../images/linkedin-icon.png") no-repeat center;
+    }
+    .social-icons {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        margin: auto;
+    }
+}

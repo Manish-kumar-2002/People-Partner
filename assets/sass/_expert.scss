@@ -1,0 +1,150 @@
+.expert-block {
+    background: $hamburger-bg;
+    padding: 40px 0;
+    @include mediaQuery(tabletLarge-view) {
+        padding: 80px 0;
+    }
+    @include mediaQuery(laptop-view) {
+        padding: 110px 0;
+    }
+    @include mediaQuery(desktop-view) {
+        padding: 150px 0;
+    }
+    @include mediaQuery(desktopXl-view) {
+        padding: 168px 0 170px;
+    }
+    h1,h2 {
+        color: $white;
+        margin-bottom: 20px;
+        text-align: center;
+        text-shadow: 1px 5px 9.9px $shadow-pink;
+        opacity: 70%;
+        @include mediaQuery(laptop-view) {
+            margin-bottom: 33px;
+        }          
+    }
+    .container {
+        max-width: 1456px;
+    }
+    p {
+        font-family: 'lexendMega-light', sans-serif;
+        color: $white;
+        text-align: center;
+        @include mediaQuery(tablet-view) {
+            margin-bottom: 40px;
+        }
+        @include mediaQuery(tabletLarge-view) {
+            margin-bottom: 60px;
+        }
+        @include mediaQuery(laptop-view) {
+            @include fontsize(20px);
+            margin-bottom: 80px;
+        }
+        @include mediaQuery(desktop-view) {
+            margin-bottom: 95px;
+        }
+        @include mediaQuery(desktopXl-view) {
+            margin-bottom: 113px;
+        }
+    }
+    .expert-wrap {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        @include mediaQuery(tablet-view) {
+            justify-content: center;
+            flex-direction: row;
+            gap: 20px;
+        }
+        @include mediaQuery(tabletLarge-view) {
+            gap: 40px;
+        }
+        @include mediaQuery(laptop-view){
+            gap: 60px;
+        }
+        @include mediaQuery(desktop-view){
+            gap: 80px;
+        }
+        @include mediaQuery(desktopXl-view) {
+            gap: 112px;
+        }
+    }
+    .expert-content {
+        &:not(:last-child) {
+            margin-bottom: 20px;
+            @include mediaQuery(tablet-view) {
+                margin-bottom: 0;
+            }
+        }
+    }
+    .expert-image {
+        background: $expert-bg;
+        padding: 25px;
+        border-radius: 50%;
+        position: relative;
+        z-index: 5;
+        margin-bottom: 15px;
+        width: 100px;
+        height: 100px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: -5px 0 0 #0d1732, 0px 0 7px 4px rgb(13 23 50 / 23%) inset;
+        img {
+            display: block;
+            object-fit: contain;
+            margin-left: auto;
+            margin-bottom: auto;
+            position: relative;
+            right: -2px;
+            top: 1px;
+        }
+        &::after {
+            position: absolute;
+            content: "";
+            display: block;
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            border: 3px solid $white;
+            z-index: -1;
+            top: -7px;
+            left: 6px;  
+            opacity: 76%;
+            @include mediaQuery(tabletLarge-view){
+                top: -8px;
+                left: 18px;
+            }
+        }
+        @include mediaQuery(tabletLarge-view){
+            width: 150px;
+            height: 150px;
+            box-shadow: -13px 16px 19px 1px rgb(13 23 50 / 85%), 0px 0 7px 4px rgb(13 23 50 / 23%) inset;
+        }
+        @include mediaQuery(desktop-view){
+            width: 200px;
+            height: 200px;
+        }
+        @include mediaQuery(desktopXl-view){
+            width: 270px;
+            height: 270px;
+        }
+        @include mediaQuery(desktopXl-view) {
+            margin-bottom: 65px;
+        }
+    }
+    .expert-tag {
+        font-family: 'lexendMega-light', sans-serif;
+        color: $white;
+        text-shadow: 0px 4px 0px $shadow-bl;
+        @include fontsize(20px);
+        display: block;
+        text-align: center;
+        @include mediaQuery(tablet-view){
+            @include fontsize(28px);
+        }
+        @include mediaQuery(tabletLarge-view) {
+            @include fontsize(40px);
+        }
+    }
+}

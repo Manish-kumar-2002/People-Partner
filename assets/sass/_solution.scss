@@ -1,0 +1,245 @@
+.solution-block {
+    position: relative;
+    background: linear-gradient(90deg, rgba(98,165,195,1) 0%, rgba(188,209,210,1) 50%, rgba(190,210,211,1) 100%);
+    padding: 40px 0;
+    @include mediaQuery(tabletLarge-view) {
+        padding: 80px 0;
+    }
+    @include mediaQuery(laptop-view) {
+        padding: 110px 0;
+    }
+    @include mediaQuery(desktop-view) {
+        padding: 150px 0 110px;
+    }
+    @include mediaQuery(desktopXl-view) {
+        padding: 184px 0 110px;
+    }
+    .solution-content {
+        @include mediaQuery(tablet-view) {
+            display: flex;
+            align-items: start;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+    }
+    .solution-left-content {
+        background: $solution-bg;
+        border-radius: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        position: relative;
+        z-index: 2;
+        padding: 10px 10px 40px;
+        margin-bottom: 30px;
+        box-shadow: -8px 3px 0 #326d8b;
+        &::after {
+            position: absolute;
+            content: "";
+            top: -15px;
+            left: 10px;
+            display: block;
+            width: 100%;
+            height: 100%;
+            border-radius: 20px;
+            border: 5px solid $white;
+            z-index: -1;
+            box-shadow: -6px 4px 0 #01516d , inset -4px 5px 0 #01516d;
+            @include mediaQuery(tablet-view) {
+                left: 12px;
+            }
+            @include mediaQuery(tabletLarge-view){
+                top: -20px;
+                border-radius: 44px;
+                border: 11px solid $white;
+                left: 18px;
+            }
+            @include mediaQuery(laptop-view){
+                top: -21px;
+                left: 21px;
+            }
+        }
+        .one-tag {
+            font-family: 'moduluspro-medium', sans-serif;
+            border-radius: 20px;
+            @include fontsize(100px);
+            display: block;
+            color: $white;
+            color: rgb(255, 255, 255);
+            text-shadow: -3px 4px 0px rgb(0, 33, 69);
+            letter-spacing: 4px;
+            @include mediaQuery(tabletLarge-view) {
+                @include fontsize(125px);
+            }
+            @include mediaQuery(laptop-view) {
+                @include fontsize(150px);
+                text-shadow: -8px 6px 0px rgb(0, 33, 69);
+            }
+            @include mediaQuery(desktop-view){
+                @include fontsize(155px);
+            }
+        }
+        .solutin-tag {
+            font-family: 'moduluspro-medium', sans-serif;
+            @include fontsize(40px);
+            color: $white;
+            text-shadow: -4px 4px 0px rgb(0, 33, 69);
+            letter-spacing: 4px;
+            @include mediaQuery(tabletLarge-view) {
+                @include fontsize(55px);
+            } 
+            @include mediaQuery(laptop-view) {
+                @include fontsize(65px);
+                text-shadow: -8px 6px 0px rgb(0, 33, 69);
+            }
+            @include mediaQuery(desktop-view) {
+                @include fontsize(70px)
+            }            
+        }
+        @include mediaQuery(tablet-view) {
+            width: 44%;
+            margin-bottom: 0;
+            padding-bottom: 40px;
+        }
+        @include mediaQuery(tabletLarge-view) {
+            padding: 33px 33px 51px;
+            border-radius: 44px;
+        }
+        @include mediaQuery(laptop-view) {
+            padding: 33px 33px 71px;
+        }
+        @include mediaQuery(desktopXl-view){
+            padding: 33px 33px 111px;
+        }
+    }
+    .solution-right-content {
+        @include mediaQuery(tablet-view) {
+            width: 47%;
+        }
+    }
+    h1,h2 {
+        font-family: 'moduluspro-medium', sans-serif;
+        color: $black;
+        text-shadow: 0px 3px 0px rgba(0, 81, 109, 0.7); 
+        letter-spacing: 4px;
+        @include mediaQuery(desktop-view) {
+            @include fontsize(44px);
+        }   
+    }
+    .solution-head-block {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 20px;
+        @include mediaQuery(tablet-view){
+            justify-content: start;
+            gap:10px;
+        }
+        @include mediaQuery(laptop-view) {
+            gap: 19px;
+            margin-bottom: 40px;
+        }
+        @include mediaQuery(desktop-view) {
+            margin-bottom: 55px;
+        }
+        @include mediaQuery(desktopXl-view) {
+            margin-bottom: 66px;
+        }
+    }
+    .solution-image {
+        width: 25px;
+        img {
+            width: 100%;
+            display: block;
+        }
+        @include mediaQuery(tabletLarge-view) {
+            width: 45px;
+        }
+        @include mediaQuery(laptop-view) {
+            width: 55px;
+        }
+        @include mediaQuery(desktop-view) {
+            width: 65px;
+        }
+        @include mediaQuery(desktopXl-view) {
+            width: 77px;
+        }
+    }
+    ul {
+        @include mediaQuery(tablet-view) {
+            padding-left: 15px;
+        }
+        @include mediaQuery(tabletLarge-view) {
+            padding-left: 20px;
+        }
+        @include mediaQuery(laptop-view) {
+            padding-left: 25px;
+        }
+        @include mediaQuery(desktop-view) {
+            padding-left: 30px;
+        }
+        @include mediaQuery(desktopXl-view) {
+            padding-left: 36px;
+        }
+    }
+    .slick-arrow.slick-prev, .slick-arrow.slick-next {
+        position: absolute;
+        border: none;
+        padding: 0;
+        font-size: 0;
+        width: 80px;
+        height: 80px;
+        top: 50%;
+        z-index: 2;
+        left: 16px;
+        transform: translateY(-50%);
+    }
+    .slick-arrow.slick-next {
+        background-image: url(../images/right-arrow.png);
+        background-repeat: no-repeat;
+        background-size: 10px;
+        right: 0;
+        background-position: right top;
+        left: auto;
+        @include mediaQuery(tablet-view) {
+            background-size: 30px;
+        }
+        @include mediaQuery(desktopXl-view){
+            background-size: 40px;
+        }
+    }
+    .slick-arrow.slick-prev {
+        background-image: url(../images/left-arrow.png);
+        background-repeat: no-repeat;
+        background-size: 10px;
+        left: 0px;
+        @include mediaQuery(tablet-view) {
+            background-size: 30px;
+        }
+        @include mediaQuery(desktopXl-view){
+            background-size: 40px;
+            left: -80px;
+        }
+        @include mediaQuery(desktopXll-view){
+            left: -130px;
+        }
+    }
+    .slick-slide > div {
+        margin: 0px 10px 30px;
+    }
+    .slick-list {
+        margin: 0 -10px;
+       
+    }
+    .slick-track{
+        padding: 20px 0 50px;
+    }
+}
+
+
+
+// body {
+//     background: url('../images/background.jpg') no-repeat center top;
+//     opacity: 0.5;
+// }

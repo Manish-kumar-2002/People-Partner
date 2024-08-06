@@ -1,0 +1,270 @@
+.team {
+    // background: linear-gradient( 40deg, rgb(93,163,194) 44%, rgb(170,201,207) 67%, rgb(246,238,220) 87%);
+    background: url('../images/team-banner.jpg') no-repeat center/cover;
+    position: relative;
+    padding: 40px 0;
+    a:not(.btn-block , .expert-content) {
+        text-decoration: underline;
+        transition: all 0.3s ease-in-out;
+        &:hover {
+            text-decoration: none;
+        }
+    }
+    .container {
+        position: relative;
+        z-index: 2;
+    }
+    @include mediaQuery(tabletLarge-view) {
+        padding: 80px 0;
+    }
+    @include mediaQuery(laptop-view) {
+        padding: 110px 0;
+    }
+    @include mediaQuery(desktop-view) {
+        padding: 150px 0;
+    }
+    @include mediaQuery(desktopXl-view) {
+        padding: 173px 0 218px;
+    }
+    .consulting-solutions-content {
+        &:not(:last-child) {
+            margin-bottom: 30px;
+        }
+       @include mediaQuery(tablet-view) {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        align-items: self-start;
+        &:not(:last-child) {
+            margin-bottom: 30px;
+        }
+       }
+       @include mediaQuery(tabletLarge-view) {
+        &:not(:last-child) {
+            margin-bottom: 40px;
+        }
+       }
+       @include mediaQuery(laptop-view) {
+        &:not(:last-child) {
+            margin-bottom: 50px;
+        }
+       }
+       @include mediaQuery(desktop-view) {
+        &:not(:last-child) {
+            margin-bottom: 62px;
+        }
+       }
+    }
+    h1,h2{
+        text-shadow: -3px 3px 0px rgba(0, 81, 109, 0.7);
+        text-align: center;
+        margin-bottom: 20px;
+        @include mediaQuery(tablet-view) {
+            margin-bottom: 40px;
+        }
+        @include mediaQuery(tabletLarge-view) {
+            margin-bottom: 50px;
+        }
+        @include mediaQuery(laptop-view) {
+            margin-bottom: 70px;
+        }
+        @include mediaQuery(desktopXl-view) {
+            margin-bottom: 93px;
+        }
+    }
+    .consulting-solutions-image {
+        width: 250px;
+        margin: 0 auto 20px;
+        position: relative;
+        transition: all 0.3s ease-in-out;
+        &:hover {
+            &:before,&::after {
+                top: 0;
+                left: 0;
+            }
+            img {
+                box-shadow: 0px 0px 0 $shadow-blue;
+            }
+        }
+        img {
+            width: 100%;
+            display: block;
+            box-shadow: -5px 5px 0 $shadow-blue;
+            border-radius: 30px;
+            transition: all 0.3s ease-in-out;
+            @include mediaQuery(tabletLarge-view) {
+                border-radius: 40px;
+            }
+            @include mediaQuery(laptop-view) {
+                border-radius: 64px;
+            }
+        }
+        &::after,&::before {
+            position: absolute;
+            content: "";
+            top: -10px; 
+            left: 11px;
+            display: block;
+            width: 100%;
+            height: 100%;
+            border: 5px solid $white;
+            border-radius: 20px;
+            transition: all 0.3s ease-in-out;
+            @include mediaQuery(tabletLarge-view) {
+                border-radius: 40px;
+            }
+            @include mediaQuery(laptop-view) {
+                border-radius: 64px;
+            }
+            @include mediaQuery(desktop-view) {
+                top: -21px;
+                left: 16px;
+            }
+        }
+        &::before {
+            top: -8px;
+            left: 7px;
+            border-color: #33677c;
+            opacity: 67%;
+            @include mediaQuery(desktop-view) {
+                top: -17px;
+                left: 9px;
+            }
+        }
+        @include mediaQuery(tablet-view) {
+            margin: 0;
+        }
+        @include mediaQuery(tablet-view) {
+            width: 300px;
+        }
+        @include mediaQuery(tabletLarge-view) {
+            width: 400px;
+        }
+        @include mediaQuery(laptop-view) {
+            width: 500px;
+        }
+        @include mediaQuery(desktop-view) {
+            width: 650px;
+        }
+        @include mediaQuery(desktopXl-view) {
+            width: 622px;
+        }
+    }
+    .consulting-solutions-right {
+        @include mediaQuery(tablet-view) {
+            width: calc(100% - 350px);
+        }
+        @include mediaQuery(tabletLarge-view) {
+            width: calc(100% - 470px);
+        }
+        @include mediaQuery(laptop-view) {
+            width: calc(100% - 570px);
+        }
+        @include mediaQuery(desktop-view) {
+            width: calc(100% - 700px);
+        }
+        @include mediaQuery(desktopXl-view) {
+            width: calc(100% - 722px);
+        }
+    }
+    h4 {
+        font-family: 'lexendMega-light', sans-serif;
+        @include fontsize(14px);
+        text-align: center;
+        margin-bottom: 20px;
+        color: $black;
+        text-shadow: none;
+        @include mediaQuery(tablet-view) {
+            @include fontsize(18px);
+            text-align: left;
+        }
+        @include mediaQuery(tabletLarge-view) {
+            @include fontsize(25px)
+        }
+    }
+    p {
+        font-family: 'lexendMega-light', sans-serif;
+        @include mediaQuery(tablet-view) {
+            @include fontsize(16px);
+            margin-bottom: 28px;
+        }
+        @include mediaQuery(tabletLarge-view) {
+            @include fontsize(18px);
+            margin-bottom: 24px;
+        }
+        @include mediaQuery(laptop-view) {
+            @include fontsize(20px);
+            line-height: 1.5;
+        }
+    }
+    ul,ol {
+        margin-bottom: 20px;
+        li{
+            @include fontsize(14px);
+            text-shadow: none;
+            @include mediaQuery(tablet-view) {
+                @include fontsize(16px);
+            }
+            @include mediaQuery(tabletLarge-view) {
+                @include fontsize(18px);
+            }
+            @include mediaQuery(laptop-view) {
+                @include fontsize(20px);
+                padding-left: 26px;
+                &:not(:last-child) {
+                    margin-bottom: 4px;
+                }
+            }
+        }
+        @include mediaQuery(tablet-view) {
+            margin-bottom: 25px;
+        }
+        @include mediaQuery(tabletLarge-view) {
+            margin-bottom: 30px;
+        }
+        @include mediaQuery(laptop-view) {
+            margin-bottom: 33px;
+        }
+    }
+    .consulting-tag {
+        font-family: 'lexendMega-light', sans-serif;
+        @include font-size(14px);
+        display: block;
+        margin-bottom: 20px;
+        @include mediaQuery(tablet-view) {
+            @include fontsize(16px);
+            margin-bottom: 25px;
+        }
+        @include mediaQuery(tabletLarge-view) {
+            @include fontsize(18px);
+            margin-bottom: 30px;
+        }
+        @include mediaQuery(laptop-view) {
+            @include fontsize(20px);
+            margin-bottom: 54px;
+        }
+    }
+    .btn-block {
+        background: transparent;
+        border-radius: 20px;
+        border: 2px solid $white;
+        transition: all 0.3s ease-in-out;
+        padding: 16px 12px 16px 18px;
+        &:after {
+            content: none;
+        }
+        &:hover {
+            background-color: #00506c;
+            border-color: #00506c;
+        }
+        @include mediaQuery(tablet-view) {
+            margin: 0;
+        }
+        @include mediaQuery(laptop-view) {
+            padding: 14px 21px 14px 27px;
+            &::after {
+                border-radius: 100px;
+            }
+        }
+    }
+}

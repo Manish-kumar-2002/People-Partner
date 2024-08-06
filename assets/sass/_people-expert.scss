@@ -1,0 +1,198 @@
+.people-expert-block {
+    background: linear-gradient(90deg, rgb(98, 165, 195) 0%, rgb(188, 209, 210) 50%, rgb(190, 210, 211) 100%);
+    padding: 40px 0;
+    position: relative;
+    @include mediaQuery(tabletLarge-view) {
+        padding: 80px 0;
+    }
+    @include mediaQuery(laptop-view) {
+        padding: 110px 0;
+    }
+    @include mediaQuery(desktop-view) {
+        padding: 150px 0;
+    }
+    @include mediaQuery(desktopXl-view) {
+        padding: 176px 0;
+    }
+    .container {
+        @include mediaQuery(tablet-view) {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
+    }
+    .people-expert-left {
+        @include mediaQuery(tablet-view) {
+            width: 66%;
+        }
+    }
+    .people-expert-content {
+        margin-bottom: 30px;
+        @include mediaQuery(tablet-view){
+            margin-bottom: 40px;
+        }
+        @include mediaQuery(tabletLarge-view){
+            margin-bottom: 45px;
+        }
+        @include mediaQuery(laptop-view){
+            margin-bottom: 50px;
+        }
+        @include mediaQuery(desktopXl-view) {
+            margin-bottom: 57px;
+        }
+    }
+    .people-expert-image {
+        display: none;
+        img {
+            width: 100%;
+            display: block;
+        }
+        @include mediaQuery(tablet-view) {
+            display: block;
+            position: absolute;
+            top: 15%;
+            right: 0;
+            bottom: 0;
+            margin: auto;
+            width: 270px;
+        }
+        @include mediaQuery(tabletLarge-view){
+            width: 330px;
+        }
+        @include mediaQuery(laptop-view){
+            width: 400px;
+        }
+        @include mediaQuery(desktop-view) {
+            width: 450px;
+        }
+        @include mediaQuery(desktopXl-view) {
+            width: 503px;
+        }
+    }
+    h1,h2 {
+        color: $black;
+        text-align: center;
+        text-shadow: 0px 3px 0px rgba(0, 80, 108, 0.7);
+        margin-bottom: 20px;  
+        @include mediaQuery(tablet-view) {
+            text-align: left;
+            margin-bottom: 25px;
+        }    
+        @include mediaQuery(tabletLarge-view) {
+            margin-bottom: 30px;
+        }
+        @include mediaQuery(laptop-view) {
+            margin-bottom: 34px;
+        }    
+    }
+    p {
+        color: $black;
+        font-family: 'lexendMega-regular', sans-serif;
+        @include mediaQuery(tabletLarge-view) {
+            @include fontsize(16px);
+            margin-bottom: 25px;
+        }
+        @include mediaQuery(laptop-view){
+            @include fontsize(18px);
+            margin-bottom: 30px;
+        }
+        @include mediaQuery(desktopXl-view){
+            @include fontsize(20px);
+            line-height: 1.4;
+            margin-bottom: 34px;
+        }
+        a {
+            color: $white;
+            position: relative;
+            &:after {
+                position: absolute;
+                content: "";
+                top: 100%;
+                left: 0;
+                width: 0;
+                height: 1px;
+                background-color: $white;
+                transition: all 0.5s;
+            }
+            &:hover {
+                &::after {
+                    width: 100%;
+                }
+            }
+        }
+    }
+    h3 {
+        font-family: 'lexendMega-bold', sans-serif;
+        text-align: center;
+        margin-bottom: 20px;
+        text-transform: capitalize;
+        @include mediaQuery(tablet-view) {
+            text-align: left;
+        }
+        @include mediaQuery(tabletLarge-view) {
+            margin-bottom: 25px;
+        }
+        @include mediaQuery(laptop-view){
+            margin-bottom: 30px;
+        }
+        @include mediaQuery(desktopXl-view) {
+            margin-bottom: 35px;
+        }
+    }
+    ul {
+        margin-bottom: 20px;
+        li {
+            @include fontsize(16px);
+            text-shadow: none;
+            @include mediaQuery(laptop-view) {
+                @include fontsize(20px);
+            }
+            @include mediaQuery(desktopXl-view) {
+                padding-left: 31px;
+            }
+            &::after{
+                @include mediaQuery(laptop-view){
+                    width: 12px;
+                    height: 12px;
+                }
+            }
+            &:not(:last-child) {
+                @include mediaQuery(tablet-view) {
+                    margin-bottom: 8px;
+                }
+            }
+        }
+        @include mediaQuery(desktopXl-view){
+            margin-bottom: 30px;
+        }
+    }
+    .people-content-expert {
+        h3 {
+            font-family: 'lexendMega-regular', sans-serif;
+            text-shadow: 0px 3px 0px rgba(0, 80, 108, 0.7);  
+            text-transform: capitalize; 
+            @include mediaQuery(tablet-view){
+                margin-bottom: 25px;
+            }
+            @include mediaQuery(tabletLarge-view){
+                margin-bottom: 30px;
+            }
+            @include mediaQuery(laptop-view){
+                margin-bottom: 35px;
+            }
+            @include mediaQuery(desktop-view){
+                margin-bottom: 42px;
+            }
+            @include mediaQuery(desktopXl-view) {
+                @include fontsize(29px);
+                margin-bottom: 47px;
+            }           
+        }
+    }
+    .btn-block {
+        background: $choose-bg;
+        @include mediaQuery(tablet-view) {
+            margin: 0;
+        }
+    }
+}

@@ -1,0 +1,133 @@
+.image-w-text {
+    background: $wonderful-bg;
+    padding: 40px 0;
+    a:not(.btn-block , .expert-content) {
+        text-decoration: underline;
+        transition: all 0.3s ease-in-out;
+        &:hover {
+            text-decoration: none;
+        }
+    }
+    @include mediaQuery(tabletLarge-view) {
+        padding: 80px 0;
+    }
+    @include mediaQuery(laptop-view) {
+          padding: 110px 0;      
+    }
+    @include mediaQuery(desktop-view) {
+        padding: 150px 0;   
+    }
+    @include mediaQuery(desktopXl-view) {
+        padding: 173px 0 178px;
+    }
+    .container {
+        display: flex;
+        flex-direction: column;
+        @include mediaQuery(tablet-view) {
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+    }
+    .wonderful-image {
+        margin-bottom: 20px;
+        img {
+            width: 100%;
+            display: block;
+            @include mediaQuery(tablet-view) {
+                width: 350px;
+            }
+            @include mediaQuery(tabletLarge-view) {
+                width: 450px;
+            }
+            @include mediaQuery(laptop-view) {
+                width: 550px;
+            }
+            @include mediaQuery(desktop-view) {
+                width: 600px;
+            }
+            @include mediaQuery(desktopXl-view) {
+                width: 645px;
+            }
+        }
+        @include mediaQuery(tablet-view) {
+            margin-bottom: 0;
+            width: 45%;
+        }
+    }
+    .wonderful-content {
+        h1,h2 {
+            font-family: 'moduluspro-medium',sans-serif;
+            color: $heading-color;
+            @include fontsize(25px);
+            text-align: center;
+            margin-bottom: 20px;
+            text-shadow: -2px 3.12px 0px rgba(0, 0, 2, 0.2);     
+            @include mediaQuery(tablet-view) {
+                @include fontsize(40px);
+                text-align: left;
+                margin-bottom: 30px;
+            }    
+            @include mediaQuery(tabletLarge-view) {
+                @include fontsize(50px);
+                text-shadow: -3.857px 3.12px 0px rgba(0, 0, 2, 0.2); 
+            }
+            @include mediaQuery(laptop-view) {
+                @include fontsize(65px);
+                margin-bottom: 40px;
+            }
+            @include mediaQuery(desktop-view) {
+                @include fontsize(75px);
+                margin-bottom: 50px;
+                text-shadow: -6.857px 4.12px 0px rgba(0, 0, 2, 0.2); 
+            }
+            @include mediaQuery(desktopXl-view) {
+                @include fontsize(96px);
+                line-height: 1;
+                margin-bottom: 60px;
+            }     
+        }
+        .btn-block {
+            background: $choose-bg;
+            @include mediaQuery(tablet-view) {
+                margin: 0;
+            }
+        }
+        @include mediaQuery(tablet-view) {
+            width: 44%;
+            padding-top: 40px;
+        }
+        @include mediaQuery(tabletLarge-view) {
+            padding-top: 60px;
+        }
+        @include mediaQuery(laptop-view) {
+            padding-top: 80px;       
+        }
+        @include mediaQuery(desktop-view) {
+            padding-top: 108px;
+        }
+        @include mediaQuery(desktopXl-view) {
+            padding-top: 108px;
+        }
+    }
+    ul,ol {
+        li {
+            font-family: 'moduluspro-medium',sans-serif;
+            color: $heading-color;
+            text-shadow: none;
+            @include fontsize(20px);
+            &:after {
+                border-color: $heading-color;
+            }
+            @include mediaQuery(tablet-view) {
+                @include fontsize(18px);
+            }
+            @include mediaQuery(tabletLarge-view) {
+                @include fontsize(20px);
+            }
+        }
+    }
+}
+
+
+

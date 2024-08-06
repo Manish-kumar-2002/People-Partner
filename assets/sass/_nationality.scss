@@ -1,0 +1,38 @@
+.nationality-block {
+    background: $hamburger-bg;
+    @include mediaQuery(desktopXl-view) {
+        padding-bottom: 183px;
+    }
+    h1 {
+        color: $white;
+    }
+    ul {
+        li {
+            color: $white;
+            @include mediaQuery(desktopXl-view) {
+                @include fontsize(30px);
+                padding-left: 61px;
+                &:not(:last-child) {
+                    margin-bottom: 14px;
+                }
+            }
+        }
+    }
+    p {
+        color: $white;
+    }
+    .people-expert-left {
+        margin-left: auto;
+        @include mediaQuery(tablet-view) {
+            width: 63%;
+        }
+        @include mediaQuery(tabletLarge-view) {
+            width: 66%;
+        }
+    }
+    .people-expert-image {
+        left: 0;
+        right: auto;
+        top: 16%;
+    }
+}

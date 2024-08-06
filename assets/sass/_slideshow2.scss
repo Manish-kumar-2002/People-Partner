@@ -1,0 +1,190 @@
+.slideshow2 {
+    position: relative;
+    background: linear-gradient( 34deg, rgb(93,163,194) 4%, rgb(170,201,207) 67%, rgb(246,238,220) 100%);
+    padding: 40px 0;
+    a:not(.btn-block , .expert-content) {
+        text-decoration: underline;
+        transition: all 0.3s ease-in-out;
+        &:hover {
+            text-decoration: none;
+        }
+    }
+    @include mediaQuery(tabletLarge-view) {
+        padding: 80px 0;
+    }
+    @include mediaQuery(laptop-view) {
+        padding: 110px 0;
+    }
+    @include mediaQuery(desktop-view) {
+        padding: 150px 0 110px;
+    }
+    @include mediaQuery(desktopXl-view) {
+        padding: 184px 0 110px;
+    }
+    .solution-content {
+        @include mediaQuery(tablet-view) {
+            display: flex !important;
+            align-items: start;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+    }
+    .slideshow-image {
+        width: 200px;
+        img {
+            width: 100%;
+            display: block;
+        }
+        @include mediaQuery(mobile-view) {
+            width: 300px;
+        }
+        @include mediaQuery(tablet-view) {
+            width: 350px;
+        }
+        @include mediaQuery(laptop-view) {
+            width: 500px;
+        }
+        @include mediaQuery(desktopXl-view) {
+            width: 670px;
+        }
+    }
+    
+    .solution-right-content {
+        @include mediaQuery(tablet-view) {
+            width: 47%;
+        }
+    }
+    h1,h2 {
+        font-family: 'moduluspro-medium', sans-serif;
+        color: $black;
+        text-shadow: -1px 3px 0px rgba(0, 81, 109, 0.7); 
+        letter-spacing: 4px;
+        @include mediaQuery(desktop-view) {
+            @include fontsize(44px);
+        }   
+    }
+    .solution-head-block {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 20px;
+        gap: 10px;
+        @include mediaQuery(tablet-view){
+            justify-content: start;
+        }
+        @include mediaQuery(laptop-view) {
+            gap: 19px;
+            margin-bottom: 40px;
+        }
+        @include mediaQuery(desktop-view) {
+            margin-bottom: 55px;
+        }
+        @include mediaQuery(desktopXl-view) {
+            margin-bottom: 66px;
+        }
+    }
+    .solution-image {
+        width: 25px;
+        img {
+            width: 100%;
+            display: block;
+        }
+        @include mediaQuery(tabletLarge-view) {
+            width: 45px;
+        }
+        @include mediaQuery(laptop-view) {
+            width: 55px;
+        }
+        @include mediaQuery(desktop-view) {
+            width: 65px;
+        }
+        @include mediaQuery(desktopXl-view) {
+            width: 77px;
+        }
+    }
+    ul {
+        li {
+            text-shadow: -1px 3px 0px rgba(0, 81, 109, 0.7);
+            padding-left: 20px;
+            &:not(:last-child) {
+                margin-bottom: 8px;
+            }
+            @include mediaQuery(laptop-view) {
+                padding-left: 26px;
+            }
+        }
+        @include mediaQuery(tablet-view) {
+            padding-left: 15px;
+        }
+        @include mediaQuery(tabletLarge-view) {
+            padding-left: 20px;
+        }
+        @include mediaQuery(laptop-view) {
+            padding-left: 25px;
+        }
+        @include mediaQuery(desktop-view) {
+            padding-left: 30px;
+        }
+        @include mediaQuery(desktopXl-view) {
+            padding-left: 36px;
+        }
+    }
+    .slick-arrow.slick-prev, .slick-arrow.slick-next {
+        position: absolute;
+        border: none;
+        padding: 0;
+        font-size: 0;
+        width: 80px;
+        height: 80px;
+        top: 50%;
+        z-index: 2;
+        left: 16px;
+        transform: translateY(-50%);
+    }
+    .slick-arrow.slick-next {
+        background-image: url(../images/right-arrow.png);
+        background-repeat: no-repeat;
+        background-size: 10px;
+        right: 0;
+        background-position: right top;
+        left: auto;
+        @include mediaQuery(tablet-view) {
+            background-size: 30px;
+        }
+        @include mediaQuery(desktopXl-view){
+            background-size: 40px;
+        }
+    }
+    .slick-arrow.slick-prev {
+        background-image: url(../images/left-arrow.png);
+        background-repeat: no-repeat;
+        background-size: 10px;
+        left: 0px;
+        @include mediaQuery(tablet-view) {
+            background-size: 30px;
+        }
+        
+        @include mediaQuery(desktopXl-view){
+            background-size: 40px;
+            left: -70px;
+        }
+        @include mediaQuery(desktopXll-view){
+            left: -130px;
+        }
+    }
+    .slick-slide > div {
+        margin: 0px auto 30px;
+        @include mediaQuery(tablet-min-view) {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+    .slick-list {
+        margin: 0 -10px;
+       
+    }
+    .slick-track{
+        padding: 20px 0 0px;
+    }
+}

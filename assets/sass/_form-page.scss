@@ -1,0 +1,301 @@
+.form-page-wrap {
+    *{
+        color: $white;
+    }
+    a:not(.btn-block) {
+        text-decoration: underline;
+        transition: all 0.3s ease-in-out;
+        &:hover {
+            text-decoration: none;
+        }
+    }
+    position: relative;
+    padding: 40px 0;
+    @include mediaQuery(tablet-view) {
+        padding: 0;
+    }
+    background: $hamburger-bg;
+    .container {
+        max-width: 100%;
+        padding: 0;
+        @include mediaQuery(tablet-view) {
+            display: flex;
+            flex-wrap: wrap;
+        }
+    }
+    .form-page-image {
+        display: none;
+        img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        @include mediaQuery(tablet-view){
+            display: block;
+            width: 50%;
+        }
+    }
+    .tel-icon {
+        background: url('../images/phone.png') no-repeat center;
+        display: inline-block;
+        width: 31px;
+        height: 31px;
+        background-size: 30px;
+    }
+    .mail-icon {
+        background: url('../images/mail.png') no-repeat center;
+        display: inline-block;
+        width: 31px;
+        height: 31px;
+        background-size: 30px;
+    }
+    .form-page-block {
+        padding: 0 20px;
+        max-width: 888px;
+        margin-right: auto;
+        h1 {
+            font-family: 'lexendMega-regular', sans-serif;
+            color: $white;
+            text-align: center;
+            margin-bottom: 20px;
+            @include mediaQuery(tablet-view) {
+                text-align: left;
+                margin-bottom: 47px;
+            }
+        }
+        @include mediaQuery(tablet-view) {
+            width: 50%;
+            background: $hamburger-bg;
+            padding: 40px;
+            margin-bottom: 0;
+        }
+        @include mediaQuery(tabletLarge-view) {
+            padding: 60px 50px;
+        }
+        @include mediaQuery(laptop-view) {
+            padding: 80px 70px;
+        }
+        @include mediaQuery(desktop-view) {
+            padding: 110px 100px;
+        }
+        @include mediaQuery(desktopXl-view) {
+            padding: 175px 170px;
+        }
+    }
+    .form-check-input {
+        &:focus {
+            box-shadow: none;
+        }
+    }
+    .inquiry-tag {
+        font-family: 'lexendMega-light', sans-serif;
+        @include fontsize(14px);
+        color: $white;
+        text-align: center;
+        display: block;
+        margin-bottom: 20px;
+        @include mediaQuery(tablet-view) {
+            text-align: left;
+        }
+        @include mediaQuery(tabletLarge-view) {
+            @include fontsize(16px);
+        }
+        @include mediaQuery(laptop-view) {
+            @include mediaQuery(18px);
+        }
+        @include mediaQuery(desktop-view) {
+            @include fontsize(20px);
+            margin-bottom:30px;
+        }
+    }
+    .socail-list {
+        margin-bottom: 20px;
+        @include mediaQuery(tabletLarge-view) {
+            margin-bottom: 40px;
+        }
+        @include mediaQuery(laptop-view) {
+            margin-bottom: 50px;
+        }
+        @include mediaQuery(desktop-view) {
+            margin-bottom: 60px;
+        }
+        li{
+            list-style-type: none;
+            padding-left: 0;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            text-shadow: none;
+            font-family: 'lexendMega-light', sans-serif;
+            @include fontsize(12px);
+            color: $social-cl;
+            &::after {
+                width: 0;
+                height: 0;
+                border: none;
+            }
+            a {
+                font-family: 'lexendMega-light', sans-serif;
+                @include fontsize(12px);
+                color: $social-cl;
+                @include mediaQuery(tabletLarge-view) {
+                    @include fontsize(14px);
+                }
+                @include mediaQuery(desktop-view) {
+                    @include fontsize(17px);
+                }
+            }
+            &:not(:last-child) {
+                margin-bottom: 15px;
+            }
+            @include mediaQuery(tabletLarge-view) {
+                @include fontsize(14px);
+            }
+            @include mediaQuery(desktop-view) {
+                @include fontsize(17px);
+            }
+        }
+    }
+    .open-time-list {
+        li {
+            color: $white;
+        }
+        @include mediaQuery(desktopXll-view) {
+            margin-bottom: 52px;
+        }
+    }
+    .form-label {
+        font-family: 'lexendMega-light', sans-serif;
+        @include fontsize(12px);
+        color: $white;
+        @include mediaQuery(tabletLarge-view) {
+            @include fontsize(14px);
+        }
+        @include mediaQuery(laptop-view) {
+            @include fontsize(15px);
+        }
+        @include mediaQuery(desktopXl-view) {
+            @include font-size(17px);
+            margin-bottom: 15px;
+        }
+    }
+    .form-select {
+        background: $hamburger-bg;
+        color: $white;
+        border-radius: 0;
+        font-family: 'lexendMega-light', sans-serif;
+        position: relative;
+        @include fontsize(13px);
+        background-image:url('../images/down-arrow.png');
+        background-repeat: no-repeat;
+        background-size: 20px;
+        background-position: center right 6px;
+        &:focus {
+            box-shadow:none;
+            border-color:$white;
+        }
+        option {
+            background: $hamburger-bg;
+            font-family: 'lexendMega-light', sans-serif;
+            @include fontsize(13px);
+            @include mediaQuery(laptop-view) {
+                @include fontsize(17px);
+            }
+        }
+        @include mediaQuery(tabletLarge-view) {
+            background-position: calc(100% - 20px) 50%;
+        }
+        @include mediaQuery(laptop-view) {
+            @include fontsize(17px);
+            padding: 18px 22px 19px;
+        }
+    }
+    .down-icon {
+        position: absolute;
+        content: "";
+        top: 0;
+        right: 15px;
+        bottom: 0;
+        margin: auto;
+        background: url('../images/down-arrow.png') no-repeat center;
+        display: inline-block;
+        width: 20px;
+        height: 20px;
+        background-size: 20px;
+    }
+    .custom-file-input {
+        position: relative;
+        display: inline-block;
+        border: 1px solid $white;
+        padding: 10px;
+        width: 100%;
+    }
+    
+    .file-upload-label {
+        padding: 10px;
+        background-color: $choose-bg;
+        color: $white;
+        cursor: pointer;
+        font-family: 'lexendMega-semiBold', sans-serif;
+        @include fontsize(12px);
+        border-radius: 40px;
+        display: block;
+        text-align: center;
+        margin-bottom: 10px;
+        @include mediaQuery(tablet-view) {
+            margin-bottom: 0;
+        }
+        @include mediaQuery(tabletLarge-view) {
+            display: inline-block;
+        }
+        @include mediaQuery(laptop-view) {
+            padding: 15px;
+        }
+        @include mediaQuery(desktopXl-view) {
+            padding: 15px 24px 19px;
+            margin-right: 10px;
+        }
+    }
+    .not-choose-file {
+        font-family: 'lexendMega-light', sans-serif;
+        @include fontsize(12px);
+        color: $white;
+        display: block;
+        text-align: center;
+        @include mediaQuery(tabletLarge-view) {
+            display: inline-block;
+        }
+    }
+    .form-check {
+        input{
+            background: $hamburger-bg;
+            border: 1px solid $white;
+            border-radius:initial;
+            @include mediaQuery(laptop-view) {
+                width: 23px;
+                height: 24px;
+                margin-right: 14px;
+            }
+        }
+    }
+    .form-check-label {
+        font-family: 'lexendMega-light', sans-serif;
+        @include fontsize(12px);
+        color: $white;
+        @include mediaQuery(laptop-view) {
+            margin-top: 9px;
+        }
+    }
+    .form-check {
+        @include mediaQuery(desktopXl-view) {
+            margin-bottom: 40px !important;
+        }
+    }
+    .btn-block {
+        background: $choose-bg;
+        @include mediaQuery(tablet-view) {
+            margin: 0;
+        }
+    }
+}
